@@ -16,7 +16,7 @@ services:
     environment:
       - HUB_HOST=hub
   search-module:
-    image: adityaqubit/selenium-docker
+    image: registry.planck.ai/selenium-docker
     depends_on:
       - chrome
       - firefox
@@ -27,7 +27,7 @@ services:
     volumes:
       - ./output/search-result:/usr/share/qubitai/test-output      
   book-flight-module:
-    image: adityaqubit/selenium-docker
+    image: registry.planck.ai/selenium-docker
     depends_on:
       - chrome
       - firefox
