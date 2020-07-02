@@ -1,11 +1,6 @@
 pipeline{
 	agent any
 	stages{
-		stage("Login to Docker registry"){
-			steps{
-				sh "docker login registry.planck.ai"
-			}
-		}
 		stage("Pull Latest Image"){
 			steps{
 				sh "docker pull registry.planck.ai/selenium-docker"
