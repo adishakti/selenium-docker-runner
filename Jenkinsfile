@@ -3,7 +3,7 @@ pipeline{
 	stages{
 		stage("Pull Latest Image"){
 			steps{
-				sh "docker pull registry.planck.ai/selenium-docker"
+				sh "docker pull adityaqubit/selenium-docker"
 			}
 		}
 		stage("Start Grid"){
