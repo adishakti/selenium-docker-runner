@@ -1,9 +1,14 @@
 pipeline{
 	agent any
 	stages{
+		stage("Login to docker internal registry"){
+			steps{
+				sh "docker login registry.planck.ai"
+			}
+		}
 		stage("Pull Latest Image"){
 			steps{
-				sh "docker pull adityaqubit/selenium-docker"
+				sh "docker pull registry.planck.ai/selenium-docker"
 			}
 		}
 		stage("Start Grid"){
